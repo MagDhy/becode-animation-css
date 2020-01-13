@@ -1,26 +1,52 @@
-html {
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+$duration: 0.3s;
+$color: rgb(239, 77, 49);
+
+* {box-sizing: border-box;}
 
 body {
-    background-color: rgb(175, 182, 187);
-    .container {
-        background-color: white;
-        width: 90%;
-        margin-left: 5%;
-    }
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+    background-color: #d8e0e5;
 }
 
-header {
-    width: 100%;
-    height: 20%;
-    border: 1px solid black;
-    button {
-        margin: 10% 80% 10%;
-        background-color: rgb(235, 18, 18);
-        color: white;
-        border-radius: 400px 400px 400px 400px;
-        border: 1px solid rgb(235, 18, 18);
+.Card {
+    width: 370px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba($color: #000000, $alpha: 0.1);
+    transition: box-shadow $duration;
+
+    .card_image {
+        img {
+            width: 370px;
+            height: 235px;
+        }
     }
+
+    .card_date {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+        background-color: $color;
+        border-radius: 50%;
+        color: white;
+        text-align: center;
+        line-height: 1.3;
+        padding-top: 5px;
+        font-size: small;
+        span {
+            display: block;
+        }
+    }
+
+}
+
+.Card:hover {
+    box-shadow: 0px 0px 40px rgba($color: #000000, $alpha: 0.4);
     
 }
